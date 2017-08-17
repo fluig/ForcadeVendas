@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Form</title>
+
+            <link rel="stylesheet" type="text/css" href="/resources/style-guide/css/fluig-style-guide.min.css" />
+	
+            <script src="/resources/js/jquery/jquery.js"></script>
+            <script src="/resources/js/jquery/jquery-ui.min.js"></script>
+            <script src="/resources/js/mustache/mustache-min.js"></script>
+            <script src="/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+            <!-- CUSTOM -->
+            <link href="/resources/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+            <link href="/resources/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+            <script src="/resources/style-guide/js/fluig-style-guide-filter.min.js"></script>
+            <script src="/resources/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+            <link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/0.css' type='text/css' rel='stylesheet' />
+			
+			<script type="text/javascript">
+			
+				function clientView() {
+				
+				if (document.getElementById("checkbox0opc0").checked) {
+						
+						document.getElementById('clienteCadastrado').style.display = 'inline';
+						document.getElementById('clienteNovo').style.display = 'none';
+					} else {
+						document.getElementById('clienteCadastrado').style.display = 'none';
+						document.getElementById('clienteNovo').style.display = 'inline';
+					}
+				
+				}
+			
+				
+			</script>
+			
+		</head>
+        <body class="fluig-style-guide">
+			
+			<form class="totvs-form grid vertical create-form-components ui-sortable t0" name="createFormComponents" style="padding-left: 10px; padding-right: 10px;"><h1 class="title-form-application">Formulário de Força de Vendas</h1>
+			<div class="form-field" data-type="checkbox" data-show-properties="" data-field-name="clienteCad">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Cliente já Cadastrado ?</label>
+		<div class="check-options"><div class="checkbox">
+		<label><input type="checkbox" id="checkbox0opc0" name="checkbox0opc0" checked=true value="Sim" onchange="Javascript:clientView()">Sim</label>
+	</div></div>
+	</div></div>
+	</div>
+	
+	<div id="clienteCadastrado">
+	<div class="form-field" data-type="combo" data-show-properties="" data-field-name="comboEmpresa" style="position: relative; left: 0px; top: 0px;">
+		<div class="form-input"><div class="form-group">
+		<label>Selecione o cliente</label>
+		<select class="form-control" name="comboEmpresa"><option value="Fluig">Fluig</option><option value="Sua Empresa">Sua Empresa</option><option value="Ceramfix">Ceramfix</option></select>
+	</div></div>
+	</div>
+	</div>
+	
+	<div id="clienteNovo" style="display: none;">
+	
+	<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="razaosocial">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Razão Social do cliente</label>
+		<input type="text" class="form-control" name="razaosocial" value="" placeholder="" data-size="big">
+	</div></div>
+	</div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="textbox2">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Nome Fantasia</label>
+		<input type="text" class="form-control" name="textbox2" value="" placeholder="" data-size="medium" style="width: 50%;">
+	</div></div>
+	</div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="textbox3">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Nome Representante</label>
+		<input type="text" class="form-control" name="textbox3" value="" placeholder="" data-size="big">
+	</div></div>
+	</div>
+	<!-- fim da div de novo cliente -->
+	</div>
+	
+	
+	
+	<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="textbox5">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Pedido de compra</label>
+		<input type="text" class="form-control" name="textbox5" value="" placeholder="" data-size="big">
+	</div></div>
+	</div><div class="form-field" data-type="textarea" data-show-properties="" data-field-name="textarea6">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Descrição do pedido</label>
+		<textarea class="form-control" rows="3" name="textarea6" placeholder="" data-size="big"></textarea>
+	</div></div>
+	</div><div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="Itens_do_pedido">
+		
+		
+		<div class="form-input"><div class="form-group">
+		<label>Itens do pedido</label>
+		<table tablename="tabledetailname1" class="table" noaddbutton="true">
+			<thead>
+				<tr class="tableHeadRow"><th class="tableColumn">Nome</th><th class="tableColumn">Quantidade</th><th class="tableColumn">Peso</th><th class="tableColumn">Preco</th></tr>
+			</thead>
+			<tbody>
+				<tr class="tableBodyRow">
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column1_1" class="form-control">
+		</div>
+	</td>
+
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column2_1" class="form-control">
+		</div>
+	</td>
+
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column3_1" class="form-control">
+		</div>
+	</td>
+
+	<td class="fs-v-align-middle">
+		<div class="form-input">
+			<input type="text" name="column4_1" class="form-control">
+		</div>
+	</td>
+</tr>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-primary" onclick="wdkAddChild('tabledetailname1')">Novo Item</button>
+	</div></div>
+	</div></form>
+		
+
+			<script type="text/javascript">
+				
+			
+			
+				var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118; 
+				  
+				$(document).keydown(function (e) {
+					if (e.keyCode == ctrl) keyDown = true;
+				}).keyup(function (e) {
+					if (e.keyCode == ctrl) keyDown = false;
+				});
+				
+				$('[data-only-numbers]').on('keypress', function (e) {
+				    if (!e) {
+					    var e = window.event;
+					}
+					
+				    if (e.keyCode > 0 && e.which == 0) {
+				    	 return true;
+					}
+					
+				    if (e.keyCode) {
+				        code = e.keyCode;
+					} else if (e.which) {
+				    	code = e.which;
+					}
+
+					if(code == 46) {
+						return true;
+					}
+					
+				    var character = String.fromCharCode(code);
+				    if (character == '\b' || character == ' ' || character == '\t') {
+				    	 return true;
+					}
+				    if (keyDown && (code == vKey || code == Vkey)) {
+				    	return (character);
+					} else  {
+						return (/[0-9]$/.test(character));
+					}
+				}).on('focusout', function (e) {
+				    var $this = $(this);
+					if($this.val() == "") {
+						return true;
+					}
+				    $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				}).on('paste', function (e) {
+				    var $this = $(this);
+				    setTimeout(function () {
+				        $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				    }, 5);
+				 });				
+
+				
+
+				$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				function validationFieldsForm(field, type){
+					if(type === "checkbox" || type === "radio"){
+						if(!field.is(':checked')){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}else{
+						if(!field.val().trim()){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}
+				}
+				
+				
+
+				var $zoomPreview = $(".zoom-preview");
+				if ($zoomPreview.length) {
+                    $zoomPreview.parent().removeClass("input-group");
+                    $zoomPreview.remove();
+                }
+
+				var ratings = $(".rating");
+				if (ratings.length > 0) ratingStars(ratings);
+				function ratingStars(stars) {
+					$.each(stars, function(i, obj) {
+                        var field = $(this).closest(".form-group").find(".rating-value");
+						var tgt = $(obj);
+						tgt.html("");
+						var rating = FLUIGC.stars(tgt, { value: field.val() });
+                        rating.on("click", function(o) {
+                            field.val($(this).index() + 1);
+                        });
+					});
+				}
+
+				$.each($("[data-date]"), function(i, o) {
+                    var id = $(o).attr("id");
+					FLUIGC.calendar("#" + id);
+				});
+
+				$(document).ready(function() {
+					$.each($("[data-date]"), function(i, o) {
+	                    var id = $(o).attr("id");
+	                    if($("#" + id).attr("readonly")) {
+	                    	$("#" + id).data('DateTimePicker').disable();
+	                    }
+					});
+				});
+			</script>
+		</body>
+	</html>
