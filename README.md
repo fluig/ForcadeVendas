@@ -43,3 +43,7 @@ Projeto desenvolvido pelo SQUAD team de BPM do fluig após o evento “Cliente e
     </td>
   </tr>
 </table>
+
+### Fique ligado!
+
+Os projetos compartilhados no repositório do GitHub não possuem suporte pois é um ambiente de compartilhamento comunitário, sendo o modelo AS IS. 
